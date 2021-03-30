@@ -23,9 +23,10 @@ class Piece extends React.Component {
     const styles = {
       left: `${Math.random() * 600}px`,
       top:`${Math.random() * 600}px`,
-      color: "green",
+      color: "lightsalmon",
       position: "absolute",
-      zIndex: 1
+      zIndex: 1,
+      fontSize: "3rem"
     };
 
     return (
