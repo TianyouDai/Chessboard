@@ -1,10 +1,12 @@
 .Chessboard {
-  border: 10px dotted salmon;
+  border: 10px solid salmon;
   height: 600px;
   width: 600px;
   display: grid;
   grid-template-rows: repeat(8,1fr);
   grid-template-columns: repeat(8,1fr);
+  position: relative;
+  z-index: 0;
 }
 
 .Square{
