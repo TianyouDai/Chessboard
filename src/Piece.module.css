@@ -1,4 +1,17 @@
 .Piece {
   position: absolute;
   z-index: 1;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.White{
+  color: white;
+}
+
+.Black{
+  color: #333;
 }

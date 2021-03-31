@@ -18,19 +18,26 @@ class Piece extends React.Component {
       "k": faChessKing,
       "p": faChessPawn
     };
+    let type = this.props.type;
+    let type_lower = type.toLowerCase();
+    let iswhite = type !== type_lower;
+    let piece_icon = lookup[type_lower];
+    let iswhite_class = (iswhite)? styles.White: styles.Black;
+    let piece_class = `${styles.Piece} ${iswhite_class}`;
+    let square_size = 75;
+    let rank = Math.floor(this.props.square / 8);
+    let file = this.props.square % 8;
 
-    let piece_icon = lookup[this.props.type.toLowerCase()];
-    const styles = {
-      left: `${Math.random() * 600}px`,
-      top:`${Math.random() * 600}px`,
-      color: "lightsalmon",
+    const css_styles = {
+      left: `${file * square_size}px`,
+      top:`${rank * square_size}px`,
       position: "absolute",
       zIndex: 1,
       fontSize: "3rem"
     };
 
     return (
-      <div className={styles.Piece} style={styles}>
+      <div className={piece_class} style={css_styles}>
         <FontAwesomeIcon icon={piece_icon} />
       </div>
     );
